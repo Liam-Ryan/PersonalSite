@@ -11,7 +11,7 @@ module.exports = {
   },
 
   resolve: {
-    extensions: ['', '.js', '.ts']
+    extensions: ['', '.js', '.ts' ]
   },
 
   module: {
@@ -40,11 +40,11 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        loaders: ['style', 'css', 'postcss', 'sass']
+        loaders: ['raw', 'style', 'css', 'postcss', 'sass']
       },
       {
-        test: /\.(woff2?|ttf|eot|svg)$/,
-        loader: 'url?limit=10000'
+        test: /fonts\/.*\.(woff|woff2|eot|ttf|svg)$/,
+        loader: 'file-loader?name="[name]-[hash].[ext]"'
       },
       {
         test: /bootstrap\/dist\/js\/umd\//,
@@ -67,6 +67,11 @@ module.exports = {
 
     new HtmlWebpackPlugin({
       template: 'src/index.html'
-    })
+    }),
+
+    new webpack.ContextReplacementPlugin(
+      /angular(\\|\/)core(\\|\/)(esm(\\|\/)src|src)(\\|\/)linker/,
+      __dirname
+    )
   ]
 };
