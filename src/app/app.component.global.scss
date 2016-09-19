@@ -1,0 +1,19 @@
+
+$bg-color: #FCF7F8;
+$primary-color: #4E8098;
+$secondary-color: #A31621;
+$tertiary-color: #FCF7F8;
+$light-color: #90C2E7;
+
+$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
+$body-bg: $bg-color;
+$text-color: $primary-color;
+$link-color: $secondary-color;
+$link-hover-color: $tertiary-color;
+$brand-primary: $primary-color;
+$brand-success: $light-color;
+$brand-warning: $secondary-color;
+
+
+@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+

@@ -40,8 +40,18 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        loaders: ['raw', 'style', 'css', 'postcss', 'sass']
+        exclude: [/\.global\.scss$/],
+        loaders: ['raw-loader', 'sass-loader']
       },
+      {
+        test: /\.global\.scss$/,
+        loaders: ['style-loader', 'css-loader', 'sass-loader']
+      },
+      /*does not work... why?
+      {
+        test: /\.scss$/,
+        loaders: ['raw', 'style', 'css', 'postcss', 'sass']
+      },*/
       {
         test: /fonts\/.*\.(woff|woff2|eot|ttf|svg)$/,
         loader: 'file-loader?name="[name]-[hash].[ext]"'
