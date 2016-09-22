@@ -1,9 +1,12 @@
 
-$bg-color: #FCF7F8;
-$primary-color: #4E8098;
-$secondary-color: #A31621;
-$tertiary-color: #FCF7F8;
-$light-color: #90C2E7;
+$bg-color: rgba(255, 255, 255, 0.7);
+
+$bright-color: #B0C7D8;
+$primary-color: #081641;
+$secondary-color: #459DDA;
+$tertiary-color: #0D43A5;
+$light-color: #0B2C72;
+$header-image: './assets/images/bluemilkyway.jpg';
 
 $icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
 $body-bg: $bg-color;
@@ -14,6 +17,45 @@ $brand-primary: $primary-color;
 $brand-success: $light-color;
 $brand-warning: $secondary-color;
 
-
 @import "~bootstrap-sass/assets/stylesheets/bootstrap";
 
+div {}
+
+.solid-bg {
+  background: $bg-color;
+}
+
+body {
+  font-size: 16px;
+  font-family: 'Arial', serif;
+  color: $primary-color;
+}
+
+main{
+  background: url($header-image) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  perspective: 1px;
+  -webkit-perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+heading {
+  height: 6rem;
+}
+
+.btn-default{
+  background-color: $secondary-color;
+  color: $bright-color;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.btn-default:hover {
+  color: $secondary-color;
+  background-color: $bright-color;
+}
