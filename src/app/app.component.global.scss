@@ -29,23 +29,19 @@ body {
   font-size: 16px;
   font-family: 'Arial', serif;
   color: $primary-color;
+  height: 200vh;
+  padding-top: 65px;
 }
 
 main{
-  background: url($header-image) no-repeat center center fixed;
+  //background: url($header-image) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  perspective: 1px;
-  -webkit-perspective: 1px;
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
-}
-
-heading {
-  height: 6rem;
 }
 
 .btn-default{
