@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="col-lg-2"></div>
+    <div class="col-lg-8">
+        <div class="section_heading text-center visible-sm visible-md visible-lg">
+            <h3>{{title}}</h3>
+            <div>
+                <span *ngFor="let file of imageFiles">
+                    <img src="{{file}}" />
+                </span>
+            </div>
+        </div>
+        <div class="section_heading text-center hidden-sm hidden-md hidden-lg">
+            <h3 data-toggle="collapse" data-target="#mobile-software">{{title}}</h3>
+            <div id="mobile-software" class="collapse">
+                <span *ngFor="let file of imageFiles">
+                    <img src="{{file}}" />
+                </span>
+            </div>
+        </div>
+
+    </div>
+    <div class="col-lg-2"></div>
+</div>

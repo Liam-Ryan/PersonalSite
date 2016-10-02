@@ -1,12 +1,13 @@
 import {Component} from "@angular/core";
-import { SoftwareLogoPaths, ToolLogoPaths } from "./image.service"
+
 @Component({
     selector: 'intro',
     templateUrl: './intro.component.html',
     styleUrls: ['./intro.component.css']
 })
 
-export class IntroComponent{
+export class IntroComponent {
+
     intro: string = `
         I'm a full-stack software developer with a background in customer services and IT. 
         This blend of past experience is surprisingly relevant when developing software.
